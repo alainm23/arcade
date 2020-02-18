@@ -32,32 +32,6 @@
     ],
     "modules": [
         {
-            "name" : "libevdev",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.freedesktop.org/libevdev/libevdev.git",
-                    "tag" : "libevdev-1.8.0",
-                    "commit" : "779749b22c0dd62cadf9e147c97c5a7675a92478"
-                }
-            ]
-        },
-        {
-            "name" : "manette",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dgudev=disabled"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/aplazas/libmanette.git",
-                    "tag" : "0.2.3",
-                    "commit" : "8aacdcbcbf37d0e48a04ffc7dde11acb50ee628b"
-                }
-            ]
-        },
-        {
             "name" : "retro-gtk",
             "buildsystem" : "meson",
             "sources" : [
