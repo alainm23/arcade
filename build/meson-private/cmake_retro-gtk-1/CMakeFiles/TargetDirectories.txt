@@ -1,0 +1,2 @@
+/home/alain/Proyectos/arcade/build/meson-private/cmake_retro-gtk-1/CMakeFiles/rebuild_cache.dir
+/home/alain/Proyectos/arcade/build/meson-private/cmake_retro-gtk-1/CMakeFiles/edit_cache.dir

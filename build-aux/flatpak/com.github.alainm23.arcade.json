@@ -1,0 +1,61 @@
+{
+    "app-id": "com.github.alainm23.arcade",
+    "base": "io.elementary.BaseApp",
+    "base-version": "juno-19.08",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.34",
+    "sdk": "org.gnome.Sdk",
+    "command": "com.github.alainm23.arcade",
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=home",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--socket=pulseaudio"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
+        {
+            "name" : "retro-gtk",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/retro-gtk.git",
+                    "tag" : "0.18.0",
+                    "commit" : "62183dc603184c9ac4b895b0146b27f363140421"
+                }
+            ]
+        },
+        {
+            "name": "byte",
+            "buildsystem": "meson",
+            "build-options": {
+                "config-opts": [
+                    "--buildtype=release"
+                ]
+            },
+            "sources": [{
+                "type": "archive",
+                "url": "https://github.com/alainm23/byte/archive/0.3.1.tar.gz",
+                "sha256": "a55449f7869b999517495154bdb31474e9b04c1e30ba8f8b8b0f6eef6306527c"
+            }]
+        }
+    ]
+}
