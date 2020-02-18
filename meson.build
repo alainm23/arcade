@@ -12,7 +12,7 @@ add_project_arguments (
 )
 
 executable(
-    meson.project_name(),
+    meson.project_name (),
     'src/Application.vala',
     dependencies: [
         dependency ('gee-0.8'),
@@ -22,7 +22,7 @@ executable(
         dependency ('sqlite3'),
         dependency ('gtk+-3.0'),
         dependency ('retro-gtk-1', version: '>=' + '0.18.0'),
-        meson.get_compiler('c').find_library('m', required : false)
+        meson.get_compiler ('c').find_library ('m', required : false)
     ],
     install: true
 )
