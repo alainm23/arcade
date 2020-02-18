@@ -5,7 +5,11 @@ project('com.github.alainm23.arcade',
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_project_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), language: 'c')
+add_project_arguments (
+  '-DGETTEXT_PACKAGE="' + meson.project_name () + '"',
+  '-DRETRO_GTK_USE_UNSTABLE_API'
+  language: 'c'
+)
 
 executable(
     meson.project_name(),
@@ -17,7 +21,7 @@ executable(
         dependency ('granite'),
         dependency ('sqlite3'),
         dependency ('gtk+-3.0'),
-        dependency ('retro-gtk', version: '>=' + '0.18.0'),
+        dependency ('retro-gtk-1', version: '>=' + '0.18.0'),
         meson.get_compiler('c').find_library('m', required : false)
     ],
     install: true

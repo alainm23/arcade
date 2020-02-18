@@ -21,7 +21,7 @@
 
 int main (string[] args) {
     Gtk.init (ref args);
-
+    
     var core = new Retro.Core ("/home/alain/cores/mgba_libretro.so");
     core.set_medias ({ "file:///home/alain/cores/Super Mario Advance 2 - Super Mario World (U) [!].gba" });
     try {
