@@ -17,7 +17,7 @@ executable(
         dependency ('granite'),
         dependency ('sqlite3'),
         dependency ('gtk+-3.0'),
-        dependency ('retro-gtk', version: '>=' + '0.18.0')
+        dependency ('retro-gtk', version: '>=' + '0.18.0'),
         meson.get_compiler('c').find_library('m', required : false)
     ],
     install: true
