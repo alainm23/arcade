@@ -11,13 +11,13 @@ executable(
     meson.project_name(),
     'src/Application.vala',
     dependencies: [
-        dependency('gee-0.8'),
-        dependency('gobject-2.0'),
-        dependency('glib-2.0'),
-        dependency('granite'),
-        dependency('sqlite3'),
-        dependency('gtk+-3.0'),
-        dependency('retro-gtk-1'),
+        dependency ('gee-0.8'),
+        dependency ('gobject-2.0'),
+        dependency ('glib-2.0'),
+        dependency ('granite'),
+        dependency ('sqlite3'),
+        dependency ('gtk+-3.0'),
+        dependency ('retro-gtk', version: '>=' + '0.18.0')
         meson.get_compiler('c').find_library('m', required : false)
     ],
     install: true
